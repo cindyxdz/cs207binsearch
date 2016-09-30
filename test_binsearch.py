@@ -37,6 +37,10 @@ def test_not_an_array():
     with raises(TypeError):
         binary_search(2, 2)
 
+def test_mix_list_type():
+    with raises(TypeError):
+        binary_search([None, 3, 4, 5], 2)
+
 def test_list_na():
     assert isinstance(binary_search([1,np.nan,2], 2),int)
         
